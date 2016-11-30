@@ -1,12 +1,5 @@
 <!DOCTYPE HTML>
-<?php
-$action = $_GET["action"];
-$myText = $_POST["email-input"];
 
-if($action = "save") {
-  file_put_contents("emails.txt", $myText);
-}
-?>  
 <html>
   <head>
 		<meta charset="utf-8">
@@ -55,13 +48,13 @@ if($action = "save") {
 		<div class="row">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4">
-				<form class="form-vertical" action="?action=save" name="subscribe" method="post">
+				<form class="form-vertical" action="http://formspree.io/you@email.com">
 					<div class="form-group">
 		  			<label class="sr-only" for="email">Email address:</label>
 		 				<input type="email" name="email-input"class="form-control" id="email">
 					</div>	 
 					<div class="form-group">
-			 			<button type="submit" class="btn btn-primary">Subscribe</button>
+			 			<button type="submit" value="Send" class="btn btn-primary">Subscribe</button>
 			 		</div>
 				</form>
 			</div>
